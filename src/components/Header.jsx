@@ -11,7 +11,7 @@ function Header() {
   return (
     <>
       <div className="grid grid-cols-1 justify-items-center  py-3 bg-red-500 h-72 border-b-[9px] border-[#58585a] ">
-        <img src={Pokedex} className="h-24 " alt="Pokedex" />
+        <img src={Pokedex} className="h-20 lg:h-24 " alt="Pokedex" />
 
         <div className="flex gap-4  h-11">
           <input

@@ -16,26 +16,27 @@ function App() {
   async function getPokemon(id) {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const pokeData = await res.json();
-    const skill = await pokeData.stats.map((habi) => habi.stat.name);
-    const ability = await pokeData.stats.map((habi) => habi.base_stat);
     const pokeInfo = {
       id: pokeData.id,
       name: pokeData.name,
-      pokeimg: pokeData.sprites.other["official-artwork"].front_default,
+      pokeimg: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeData.id}.png`,
       habilitys: [
         {
-          id:pokeData.id,
-          name: skill,
-          points: ability,
+          name: pokeData.stats.map((habi) => habi.stat.name),
+          points: pokeData.stats.map((habi) => habi.base_stat),
         },
       ],
+      type: {
+        name: pokeData.types.map((item) => [item.type.name]),
+      },
     };
 
     setPokemon(pokeInfo);
+    
   }
 
   return (
-    <div className=" w-screen h-screen bg-[#ffffff]">
+    <div className=" w-screen h-full bg-[#e0e0e0]">
       <Header />
       <div className="container px-4">
         <div className="flex justify-between mt-2 ">
@@ -56,13 +57,7 @@ function App() {
         </div>
         <section className="mt-5">
           {pokemon !== undefined ? (
-            <PokeCard
-              key={pokeId}
-              id={pokemon.id}
-              name={pokemon.name}
-              img={pokemon.pokeimg}
-              habi={pokemon.habilitys}
-            />
+            <PokeCard data={pokemon} />
           ) : (
             <img
               src={pokebola}
