@@ -32,14 +32,14 @@ function App() {
     };
 
     setPokemon(pokeInfo);
-    
   }
 
+
   return (
-    <div className=" w-screen h-full bg-[#e0e0e0]">
+    <div className=" w-full h-full bg-[#e0e0e0]">
       <Header />
-      <div className="container px-4">
-        <div className="flex justify-between mt-2 ">
+      <div className="w-96 mx-auto p-0">
+        <div className=" w-80 flex justify-between  mx-auto pt-2 ">
           <button
             className="bg-yellow-500 rounded-full"
             onClick={() =>

@@ -4,7 +4,7 @@ function Hability({ name, point }) {
    
     return (
       <>
-        <div className="mt-8 flex p-4 justify-between border borde-9 border-red-400">
+        <div className="w-80 mt-8 flex p-4 justify-between border borde-9 border-red-400">
           <div >
             {name.map((item) => (
               <p key={item}>{item}</p>
