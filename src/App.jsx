@@ -4,14 +4,21 @@ import { useState } from "react";
 import { NavArrowLeft, NavArrowRight } from "iconoir-react";
 import { PokeCard } from "./components/PokeCard";
 import pokebola from "./assets/pokebola.png";
+import "./index.css";
+import { getPokemon2 } from "./pokeAPI";
 
 function App() {
   const [pokeId, setPokeId] = useState(1);
   const [pokemon, setPokemon] = useState([]);
 
-  useEffect(() => {
+  useEffect(async() => {
     getPokemon(pokeId);
+    const result = await getPokemon2(pokeId)
+    const res = await result.json()
+    console.log(res.data);
   }, [pokeId]);
+
+  console.log(getPokemon2(pokeId).then((res) => res.object()));
 
   async function getPokemon(id) {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
@@ -34,12 +41,11 @@ function App() {
     setPokemon(pokeInfo);
   }
 
-
   return (
-    <div className=" w-full h-full ">
+    <div className={`w-full h-full bg-red-400`}>
       <Header />
-      <div className="w-96 mx-auto p-0">
-        <div className="  flex justify-between  mx-auto pt-2 ">
+      <div className="  mx-auto p-0">
+        <div className="w-[374px]  flex justify-between  mx-auto pt-2 ">
           <button
             className="bg-yellow-500 rounded-full"
             onClick={() =>
@@ -66,6 +72,8 @@ function App() {
             />
           )}
         </section>
+
+        {pokemon.type.name[0]}
       </div>
     </div>
   );
