@@ -36,10 +36,10 @@ function App() {
 
 
   return (
-    <div className=" w-full h-full bg-[#e0e0e0]">
+    <div className=" w-full h-full ">
       <Header />
       <div className="w-96 mx-auto p-0">
-        <div className=" w-80 flex justify-between  mx-auto pt-2 ">
+        <div className="  flex justify-between  mx-auto pt-2 ">
           <button
             className="bg-yellow-500 rounded-full"
             onClick={() =>
