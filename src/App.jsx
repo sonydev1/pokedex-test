@@ -4,21 +4,16 @@ import { useState } from "react";
 import { NavArrowLeft, NavArrowRight } from "iconoir-react";
 import { PokeCard } from "./components/PokeCard";
 import pokebola from "./assets/pokebola.png";
-import "./index.css";
-import { getPokemon2 } from "./pokeAPI";
+import { Button } from "./components/Button";
+
 
 function App() {
   const [pokeId, setPokeId] = useState(1);
   const [pokemon, setPokemon] = useState([]);
 
-  useEffect(async() => {
+  useEffect(() => {
     getPokemon(pokeId);
-    const result = await getPokemon2(pokeId)
-    const res = await result.json()
-    console.log(res.data);
   }, [pokeId]);
-
-  console.log(getPokemon2(pokeId).then((res) => res.object()));
 
   async function getPokemon(id) {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
@@ -29,10 +24,10 @@ function App() {
       pokeimg: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeData.id}.png`,
       habilitys: [
         {
-          name: pokeData.stats.map((habi) => habi.stat.name),
           points: pokeData.stats.map((habi) => habi.base_stat),
         },
       ],
+
       type: {
         name: pokeData.types.map((item) => [item.type.name]),
       },
@@ -42,24 +37,21 @@ function App() {
   }
 
   return (
-    <div className={`w-full h-full bg-red-400`}>
+    <div className={`w-full h-full `}>
       <Header />
       <div className="  mx-auto p-0">
         <div className="w-[374px]  flex justify-between  mx-auto pt-2 ">
-          <button
-            className="bg-yellow-500 rounded-full"
-            onClick={() =>
+          <Button
+            icon={<NavArrowLeft strokeWidth={2} width={50} height={50} />}
+            handleClick={() =>
               pokeId === 1 ? setPokeId(1) : setPokeId(pokeId - 1)
             }
-          >
-            <NavArrowLeft strokeWidth={2} width={50} height={50} />
-          </button>
-          <button
-            className="bg-yellow-500 rounded-full"
-            onClick={() => setPokeId(pokeId + 1)}
-          >
-            <NavArrowRight strokeWidth={2} width={50} height={50} />
-          </button>
+          />
+          <Button
+            icon={<NavArrowRight strokeWidth={2} width={50} height={50} />}
+            handleClick={() => setPokeId(pokeId + 1)}
+          />
+          
         </div>
         <section className="mt-5">
           {pokemon !== undefined ? (
@@ -72,8 +64,6 @@ function App() {
             />
           )}
         </section>
-
-        {pokemon.type.name[0]}
       </div>
     </div>
   );

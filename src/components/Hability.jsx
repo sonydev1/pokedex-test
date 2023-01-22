@@ -1,33 +1,72 @@
 import React from "react";
-import "./PokeCard.css";
 
-function Hability({ name, point,color }) {
+import { Statistics } from "./Statistics";
+
+function Hability({ point, color }) {
+  let ps = point[0];
+  if (ps >= 100) {
+    ps = 100;
+  }
+  let ataque = point[1];
+  if (ataque >= 100) {
+    ataque = 100;
+  }
+  let defensa = point[2];
+  if (defensa >= 100) {
+    defensa = 100;
+  }
+  let atEspe = point[3];
+  if (atEspe >= 100) {
+    atEspe = 100;
+  }
+  let desfEspe = point[4];
+  if (desfEspe >= 100) {
+    desfEspe = 100;
+  }
+  let velocidad = point[5];
+  if (velocidad >= 100) {
+    velocidad = 100;
+  }
+
   return (
     <>
-      <div className="w-80  mt-4  p-2 flex  transition-all gap-2 ">
-        
-          
-        <div className="   text-center ">
-          {name.map((item) => (
-            <p className="h-6 mt-3 text-lg font-medium w-36" key={item}>
-              {item}:
-            </p>
-          ))}
-        </div>
-        <div className="w-56 ">
-          {point.map((item, index) => (
-            <div key={index} className=" text-white  text-center   ">
-              <div
-                className={`${color} rounded-full h-6 mt-3 object-contain `}
-                style={{ width: `${item}px` }}
-              >
-                {item}%
-              </div>
-            </div>
-          ))}
-        </div>
-        </div>
-      
+      <div className="mt-4  w-full gap-2">
+        <Statistics color={color} name="PS" point={point[0]} value={ps} />
+
+        <Statistics
+          color={color}
+          name="Ataque"
+          point={point[1]}
+          value={ataque}
+        />
+        <Statistics
+          color={color}
+          name="Desensa"
+          point={point[2]}
+          value={defensa}
+        />
+
+        <Statistics
+          color={color}
+          name="At.Especial"
+          point={point[3]}
+          value={atEspe}
+        />
+
+        <Statistics
+          color={color}
+          name="Def.Especial"
+          point={point[4]}
+          value={desfEspe}
+        />
+
+        <Statistics
+          color={color}
+          name="Velocidad"
+          point={point[5]}
+          value={velocidad}
+        />
+      </div>
     </>
   );
 }
