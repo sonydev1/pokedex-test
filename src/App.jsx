@@ -21,7 +21,6 @@ function App() {
     const skill = await pokeData.stats.map((habi) => habi.stat.name);
     const ability = await pokeData.stats.map((habi) => habi.base_stat);
     let type = await pokeData.types.map((item) => [item.type.name]);
-    console.log(pokeData);
     const pokeInfo = {
       id: pokeData.id,
       name: pokeData.name,
@@ -36,13 +35,13 @@ function App() {
       type: type,
       color: type[0],
     };
-
+   
     setPokemon(pokeInfo);
   }
   return (
     <>
       {pokemon !== undefined? (
-        <div className="w-full h-full">
+        <div className="">
           <Pokedex data={pokemon} />
           <div className="absolute top-[35.5%] flex w-96   px-2 justify-between">
             <Button

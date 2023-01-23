@@ -11,13 +11,15 @@ function Pokedex({ data }) {
     return (
       <div className={` w-screen h-screen   ${data.color}`}>
         <Header />
-        <section className="mt-16 w-96 flex flex-col  items-center  px-2">
+        <section className="mt-16 w-96 flex flex-col items-center  px-2">
           {data !== undefined ? (
             <PokeCard
               id={data.id}
               name={data.name}
               img={data.pokeimg}
               habi={data.habilitys}
+              color={data.color}
+              type={data.type}
             />
           ) : (
             <img
@@ -26,7 +28,7 @@ function Pokedex({ data }) {
               className="animate-[spin_4s_linear_infinite]  w-full"
             />
           )}
-          {/*  */}
+         
         </section>
       </div>
     );
