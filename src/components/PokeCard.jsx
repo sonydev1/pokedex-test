@@ -49,7 +49,7 @@ function PokeCard({ data }) {
               </p>
             ))}
           </div>
-          <section className="w-80  ">
+          <section className="w-80  my-4 ">
             <div className="">
               {data.habilitys.map((item, index) => [
                 <Hability

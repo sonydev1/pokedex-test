@@ -39,7 +39,7 @@ function App() {
   return (
     <div className={`w-full h-full `}>
       <Header />
-      <div className="  mx-auto p-0">
+      <div className="  mx-auto ">
         <div className="w-[374px]  flex justify-between  mx-auto pt-2 ">
           <Button
             icon={<NavArrowLeft strokeWidth={2} width={50} height={50} />}
