@@ -32,7 +32,7 @@ function App() {
           points: ability,
         },
       ],
-      type: type,
+      type: {name: type},
       color: type[0],
     };
    
@@ -40,10 +40,10 @@ function App() {
   }
   return (
     <>
-      {pokemon !== undefined? (
-        <div className="">
+      {pokemon !== undefined ? (
+        <div className={`${pokemon.color}`}>
           <Pokedex data={pokemon} />
-          <div className="absolute top-[35.5%] flex w-96   px-2 justify-between">
+          <div className="absolute top-[23.5%] flex w-full px-3 justify-between">
             <Button
               icon={<NavArrowLeft strokeWidth={2} width={50} height={50} />}
               handleClick={() =>
@@ -52,7 +52,9 @@ function App() {
             />
             <Button
               icon={<NavArrowRight strokeWidth={2} width={50} height={50} />}
-              handleClick={() => pokeId === 905 ?setPokeId(905) : setPokeId(pokeId + 1)}
+              handleClick={() =>
+                pokeId === 905 ? setPokeId(905) : setPokeId(pokeId + 1)
+              }
             />
           </div>
         </div>

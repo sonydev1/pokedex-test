@@ -4,7 +4,7 @@ import Pokedex from "../assets/pokedex.png";
 function Header() {
   return (
     <>
-      <div className="grid grid-cols-1 justify-items-center  py-3  shadow-lg">
+      <div className="grid grid-cols-1 justify-items-center  py-3  shadow-md">
         <img src={Pokedex} className="h-14 mb-5 " alt="Pokedex" />
 
         <div className="flex gap-4  h-11">
@@ -15,8 +15,6 @@ function Header() {
           />
           <button className="bg-yellow-500 px-2 h-10 rounded-lg">search</button>
         </div>
-
-        
       </div>
     </>
   );

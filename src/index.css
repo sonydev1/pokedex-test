@@ -4,6 +4,7 @@
 
 .bug {
   background: #61a01b;
+  
 }
 
 .water {
@@ -15,7 +16,7 @@
 }
 
 .fire {
-  background: #e6695c;
+  background: #FBA54C;
 }
 
 .normal {
@@ -27,7 +28,7 @@
 }
 
 .electric {
-  background: #f9be00;
+  background: #f9e000;
 }
 .ground {
   background: #bfac21;

@@ -28,13 +28,9 @@ function Hability({ point, color }) {
   }
   return (
     <>
-      <div className="">
-        <Statistics
-          color={color}
-          name="PS"
-          point={point[0]}
-          value={ps}
-        />
+      <div className="p-2 ">
+        <h1 className={`text-xl text-center font-semibold ${color}1 `}>Base points</h1>
+        <Statistics color={color} name="PS" point={point[0]} value={ps} />
 
         <Statistics
           color={color}
@@ -51,14 +47,14 @@ function Hability({ point, color }) {
 
         <Statistics
           color={color}
-          name="At.Especial"
+          name="At. Especial"
           point={point[3]}
           value={atEspe}
         />
 
         <Statistics
           color={color}
-          name="Def.Especial"
+          name="Def. Especial"
           point={point[4]}
           value={desfEspe}
         />
