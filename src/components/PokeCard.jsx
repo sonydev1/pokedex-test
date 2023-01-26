@@ -1,6 +1,6 @@
 import React from "react";
 import { Hability } from "./Hability";
-import pokebal from "../assets/pokebal.png";
+import pokebal from "../assets/Pokebal.png";
 import "../index.css";
 import { Pokeball } from "iconoir-react";
 import { iconType, TypeColor } from "./../utils/utlis";
