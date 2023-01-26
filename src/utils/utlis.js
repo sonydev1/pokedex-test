@@ -1,61 +1,81 @@
+import grass from "../assets/grass.png";
+import poison from "../assets/poison.png";
+import normal from "../assets/normal.png";
+import fire from "../assets/fire.png";
+import water from "../assets/water.png";
+import electric from "../assets/electric.png";
+import ice from "../assets/ice.png";
+import fighting from "../assets/fighting.png";
+import ground from "../assets/ground.png";
+import flying from "../assets/flying.png";
+import psychic from "../assets/psychic.png";
+import bug from "../assets/bug.png";
+import rock from "../assets/rock.png";
+import ghost from "../assets/ghost.png";
+import dark from "../assets/dark.png";
+import dragon from "../assets/dragon.png";
+import steel from "../assets/steel.png";
+import fairy from "../assets/fairy.png";
+import none from "../assets/1.png";
+
 export function iconType(icon) {
   switch (icon) {
     case "grass":
-      icon = "public/grass.png";
+      icon = grass
       break;
     case "poison":
-      icon = "public/poison.png";
+      icon = poison
       break;
     case "normal":
-      icon = "public/normal.png";
+      icon = normal
       break;
     case "fire":
-      icon = "public/fire.png";
+      icon = fire
       break;
     case "water":
-      icon = "public/water.png";
+      icon = water
       break;
     case "electric":
-      icon = "public/electric.png";
+      icon = electric
       break;
     case "ice":
-      icon = "public/ice.png";
+      icon = ice
       break;
     case "fighting":
-      icon = "public/fighting.png";
+      icon = fighting
       break;
     case "ground":
-      icon = "public/ground.png";
+      icon = ground
       break;
     case "flying":
-      icon = "public/flying.png";
+      icon = flying
       break;
     case "psychic":
-      icon = "public/psychic.png";
+      icon = psychic
       break;
     case "bug":
-      icon = "public/bug.png";
+      icon = bug
       break;
     case "rock":
-      icon = "public/rock.png";
+      icon = rock
       break;
     case "ghost":
-      icon = "public/ghost.png";
+      icon = ghost
       break;
     case "dark":
-      icon = "public/dark.png";
+      icon = dark
       break;
     case "dragon":
-      icon = "public/dragon.png";
+      icon = dragon
       break;
     case "steel":
-      icon = "public/steel.png";
+      icon = steel
       break;
     case "fairy":
-      icon = "public/fairy.png";
+      icon = fairy
       break;
     default:
-      icon = "public/1.png";
+      icon = none
       break;
   }
   return icon;
