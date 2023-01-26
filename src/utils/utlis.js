@@ -1,61 +1,62 @@
 export function iconType(icon) {
   switch (icon) {
     case "grass":
-      icon = "src/assets/grass.svg";
+      
+      icon = "public/grass.png";
       break;
     case "poison":
-      icon = "src/assets/poison.svg";
+      icon = "public/poison.png";
       break;
     case "normal":
-      icon = "src/assets/normal.svg";
+      icon = "public/normal.png";
       break;
     case "fire":
-      icon = "src/assets/fire.svg";
+      icon = "public/fire.png";
       break;
     case "water":
-      icon = "src/assets/water.svg";
+      icon = "public/water.png";
       break;
     case "electric":
-      icon = "src/assets/electric.svg";
+      icon = "public/electric.png";
       break;
     case "ice":
-      icon = "src/assets/ice.svg";
+      icon = "public/ice.png";
       break;
     case "fighting":
-      icon = "src/assets/fighting.svg";
+      icon = "public/fighting.png";
       break;
     case "ground":
-      icon = "src/assets/ground.svg";
+      icon = "public/ground.png";
       break;
     case "flying":
-      icon = "src/assets/flying.svg";
+      icon = "public/flying.png";
       break;
     case "psychic":
-      icon = "src/assets/psychic.svg";
+      icon = "public/psychic.png";
       break;
     case "bug":
-      icon = "src/assets/bug.svg";
+      icon = "public/bug.png";
       break;
     case "rock":
-      icon = "src/assets/rock.svg";
+      icon = "public/rock.png";
       break;
     case "ghost":
-      icon = "src/assets/ghost.svg";
+      icon = "public/ghost.png";
       break;
     case "dark":
-      icon = "src/assets/dark.svg";
+      icon = "public/dark.png";
       break;
     case "dragon":
-      icon = "src/assets/dragon.svg";
+      icon = "public/dragon.png";
       break;
     case "steel":
-      icon = "src/assets/steel.svg";
+      icon = "public/steel.png";
       break;
     case "fairy":
-      icon = "src/assets/fairy.svg";
+      icon = "public/fairy.png";
       break;
     default:
-      icon = "src/assets/1.png";
+      icon = "public/1.png";
       break;
   }
   return icon;
