@@ -138,7 +138,7 @@ export function TypeColor(color) {
       color = "#fdb9e9";
       break;
     default:
-      color = "gainsboro";
+      color = "#ffffff";
       break;
   }
   return color;
