@@ -5,7 +5,7 @@ import "./index.css";
 import { Button } from "./components/Button";
 import { NavArrowRight } from "iconoir-react";
 import { NavArrowLeft } from "iconoir-react";
- import pokebola from './assets/Pokebola.png'
+import pokebola from "./assets/Pokebola.png";
 
 function App() {
   const [pokeId, setPokeId] = useState(1);
@@ -32,10 +32,10 @@ function App() {
           points: ability,
         },
       ],
-      type: {name: type},
+      type: { name: type },
       color: type[0],
     };
-   
+
     setPokemon(pokeInfo);
   }
   return (
