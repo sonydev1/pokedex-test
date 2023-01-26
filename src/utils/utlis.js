@@ -1,58 +1,58 @@
 export function iconType(icon) {
   switch (icon) {
     case "grass":
-      icon = "src/assets/IconType/grass.svg";
+      icon = "src/assets/grass.svg";
       break;
     case "poison":
-      icon = "src/assets/IconType/poison.svg";
+      icon = "src/assets/poison.svg";
       break;
     case "normal":
-      icon = "src/assets/IconType/normal.svg";
+      icon = "src/assets/normal.svg";
       break;
     case "fire":
-      icon = "src/assets/IconType/fire.svg";
+      icon = "src/assets/fire.svg";
       break;
     case "water":
-      icon = "src/assets/IconType/water.svg";
+      icon = "src/assets/water.svg";
       break;
     case "electric":
-      icon = "src/assets/IconType/electric.svg";
+      icon = "src/assets/electric.svg";
       break;
     case "ice":
-      icon = "src/assets/IconType/ice.svg";
+      icon = "src/assets/ice.svg";
       break;
     case "fighting":
-      icon = "src/assets/IconType/fighting.svg";
+      icon = "src/assets/fighting.svg";
       break;
     case "ground":
-      icon = "src/assets/IconType/ground.svg";
+      icon = "src/assets/ground.svg";
       break;
     case "flying":
-      icon = "src/assets/IconType/flying.svg";
+      icon = "src/assets/flying.svg";
       break;
     case "psychic":
-      icon = "src/assets/IconType/psychic.svg";
+      icon = "src/assets/psychic.svg";
       break;
     case "bug":
-      icon = "src/assets/IconType/bug.svg";
+      icon = "src/assets/bug.svg";
       break;
     case "rock":
-      icon = "src/assets/IconType/rock.svg";
+      icon = "src/assets/rock.svg";
       break;
     case "ghost":
-      icon = "src/assets/IconType/ghost.svg";
+      icon = "src/assets/ghost.svg";
       break;
     case "dark":
-      icon = "src/assets/IconType/dark.svg";
+      icon = "src/assets/dark.svg";
       break;
     case "dragon":
-      icon = "src/assets/IconType/dragon.svg";
+      icon = "src/assets/dragon.svg";
       break;
     case "steel":
-      icon = "src/assets/IconType/steel.svg";
+      icon = "src/assets/steel.svg";
       break;
     case "fairy":
-      icon = "src/assets/IconType/fairy.svg";
+      icon = "src/assets/fairy.svg";
       break;
     default:
       icon = "src/assets/1.png";
