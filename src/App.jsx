@@ -1,3 +1,5 @@
+import pokebola from "./assets/pokebola.png";
+
 import { useEffect } from "react";
 import { useState } from "react";
 import Pokedex from "./layout/Pokedex";
@@ -5,7 +7,6 @@ import "./index.css";
 import { Button } from "./components/Button";
 import { NavArrowRight } from "iconoir-react";
 import { NavArrowLeft } from "iconoir-react";
-import pokebola from "./assets/Pokebola.png";
 
 function App() {
   const [pokeId, setPokeId] = useState(1);
