@@ -9,7 +9,7 @@ import { NavArrowRight } from "iconoir-react";
 import { NavArrowLeft } from "iconoir-react";
 
 function App() {
-  const [pokeId, setPokeId] = useState(1);
+  const [pokeId, setPokeId] = useState(92);
   const [pokemon, setPokemon] = useState([]);
 
   useEffect(() => {
@@ -39,25 +39,13 @@ function App() {
 
     setPokemon(pokeInfo);
   }
+
   return (
     <>
       {pokemon !== undefined ? (
-        <div className={`${pokemon.color}`}>
+        <div className={`${pokemon.color} w-screen h-full`}>
+           
           <Pokedex data={pokemon} />
-          <div className="absolute top-[23.5%] flex w-full px-3 justify-between">
-            <Button
-              icon={<NavArrowLeft strokeWidth={2} width={50} height={50} />}
-              handleClick={() =>
-                pokeId === 1 ? setPokeId(1) : setPokeId(pokeId - 1)
-              }
-            />
-            <Button
-              icon={<NavArrowRight strokeWidth={2} width={50} height={50} />}
-              handleClick={() =>
-                pokeId === 905 ? setPokeId(905) : setPokeId(pokeId + 1)
-              }
-            />
-          </div>
         </div>
       ) : (
         <img
@@ -70,4 +58,7 @@ function App() {
   );
 }
 
+
+export {newp}
+const newp = () => (pokeId === 1 ? setPokeId(1) : setPokeId(pokeId - 1));
 export default App;

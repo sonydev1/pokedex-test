@@ -3,17 +3,30 @@ import { Header } from "../components/Header";
 import { PokeCard } from "../components/PokeCard";
 import pokebola from "../assets/pokebola.png";
 import "../index.css";
+import { NavArrowLeft } from 'iconoir-react';
+import { NavArrowRight } from 'iconoir-react';
+import { Button } from "../components/Button";
+import { newp } from "../App";
 
 function Pokedex({ data }) {
 
 
   if (data !== undefined) {
     return (
-      <div className={` w-screen h-screen  ${data.color}`}>
+      <div
+        className={` w-96  sm:w-full h-screen container px-3 mx-auto ${data.color}`}
+      >
         <Header />
-        <section
-          className={`mt-4  flex flex-col items-center  ${data.color}`}
-        >
+        <div className="mt-4 w-80 mx-auto flex justify-between">
+          <Button
+            icon={<NavArrowLeft strokeWidth={2} width={50} height={50} />}
+            handleClick={newp}
+          />
+          <Button
+            icon={<NavArrowRight strokeWidth={2} width={50} height={50} />}
+          />
+        </div>
+        <section className={` flex justify-center  ${data.color}`}>
           {data !== undefined ? (
             <PokeCard
               id={data.id}
@@ -27,7 +40,7 @@ function Pokedex({ data }) {
             <img
               src={pokebola}
               alt=""
-              className="animate-[spin_4s_linear_infinite]  w-full"
+              className="animate-[spin_4s_linear_infinite] bg-red-500  w-full"
             />
           )}
         </section>
